@@ -1,5 +1,8 @@
 ﻿drop database if exists oa;
 
+
+
+
 create database oa;
 use oa;
 
