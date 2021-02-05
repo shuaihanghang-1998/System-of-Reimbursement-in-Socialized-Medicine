@@ -70,7 +70,9 @@ create table employee
    post                 varchar(20),
    primary key (sn)
 );
-
+/*==============================================================*/
+/* alter  table                                                 */
+/*==============================================================*/
 alter table claim_voucher add constraint FK_Reference_2 foreign key (next_deal_sn)
       references employee (sn) on delete restrict on update restrict;
 
@@ -88,7 +90,11 @@ alter table deal_record add constraint FK_Reference_6 foreign key (deal_sn)
 
 alter table employee add constraint FK_Reference_1 foreign key (department_sn)
       references department (sn) on delete restrict on update restrict;
-
+      
+      
+/*==============================================================*/
+/* insert information                                           */
+/*==============================================================*/
 insert into department values('10001','总经理办公室','501');
 insert into department values('10002','财务部','402');
 insert into department values('10003','事业部','401');
